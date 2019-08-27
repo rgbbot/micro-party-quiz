@@ -10,7 +10,7 @@ public class QuestionFieldDataModel {
 
     public Long id;
     public Long questionFieldId;
-    public String text_value;
+    public String textValue;
     public BigDecimal numericValue;
     public LocalDateTime dateTimeValue;
     public boolean booleanValue;

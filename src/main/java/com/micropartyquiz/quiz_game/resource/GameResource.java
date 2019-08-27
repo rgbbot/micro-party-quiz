@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class GameController {
+public class GameResource {
 
     @RequestMapping(method = RequestMethod.POST, value = "/api/quiz_game/v1/init_game")
     public ResponseEntity<String> initGame() {
@@ -24,12 +24,6 @@ public class GameController {
 //    public ResponseEntity<String> submitAnswer(
 //            @RequestBody final Answer answer) {
 //        return new ResponseEntity<>("Correct", HttpStatus.OK);
-//    }
-
-//    @RequestMapping(method = RequestMethod.POST, value = "/api/quiz_game/v1/question")
-//    public ResponseEntity<String> createQuestion(
-//            @RequestBody final QuestionModel questionModel) {
-//
 //    }
 
 }

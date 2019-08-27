@@ -28,6 +28,7 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
       javax:
         persistence:
           validation:

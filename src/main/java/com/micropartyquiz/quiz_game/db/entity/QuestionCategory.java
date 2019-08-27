@@ -16,14 +16,11 @@ import java.util.List;
 public class QuestionCategory implements Serializable {
 
         @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
         private String category;
         private Long nameId;
         private boolean isDeleted;
 
-        @OneToMany(targetEntity = Question.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
-        @Transient
+        @OneToMany(cascade = CascadeType.ALL, mappedBy = "category", fetch = FetchType.LAZY)
         private List<Question> questions;
 
 }

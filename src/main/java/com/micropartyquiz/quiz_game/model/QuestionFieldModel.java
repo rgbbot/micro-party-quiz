@@ -2,6 +2,8 @@ package com.micropartyquiz.quiz_game.model;
 
 import lombok.ToString;
 
+import java.util.List;
+
 @ToString
 public class QuestionFieldModel {
 
@@ -14,9 +16,9 @@ public class QuestionFieldModel {
     public String values;
     public Long masterQuestionFieldId;
     public boolean isCorrect;
-    public String questionDescription;
+    public String questionFieldDescription;
     public Long questionId;
 
-    public QuestionFieldDataModel questionFieldDataModel;
+    public List<QuestionFieldDataModel> questionFieldDataModel;
 
 }

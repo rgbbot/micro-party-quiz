@@ -23,7 +23,7 @@ public class QuestionFieldData implements Serializable {
         @Fetch(FetchMode.JOIN)
         private QuestionField questionField;
 
-        private String text_value;
+        private String textValue;
         private BigDecimal numericValue;
         private LocalDateTime dateTimeValue;
         private boolean booleanValue;

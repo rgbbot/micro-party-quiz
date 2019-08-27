@@ -25,7 +25,7 @@ public class QuestionField implements Serializable {
         private String values;
         private Long masterQuestionFieldId;
         private boolean isCorrect;
-        private String questionDescription;
+        private String questionFieldDescription;
 
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "question_id", insertable = false, updatable = false)

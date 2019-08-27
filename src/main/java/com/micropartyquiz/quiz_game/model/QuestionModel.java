@@ -2,6 +2,8 @@ package com.micropartyquiz.quiz_game.model;
 
 import lombok.ToString;
 
+import java.util.List;
+
 @ToString
 public class QuestionModel {
 
@@ -11,6 +13,6 @@ public class QuestionModel {
     public String questionLabel;
     public String questionPicture;
 
-    public QuestionFieldModel questionFieldModel;
+    public List<QuestionFieldModel> questionFieldModels;
 
 }
