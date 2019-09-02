@@ -19,6 +19,8 @@ public class QuestionFieldModel {
     public String questionFieldDescription;
     public Long questionId;
 
+    public List<QuestionFieldModel> subFields;
+
     public List<QuestionFieldDataModel> questionFieldDataModel;
 
 }

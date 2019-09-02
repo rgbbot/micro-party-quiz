@@ -4,10 +4,10 @@ import com.micropartyquiz.quiz_game.db.entity.Question;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface QuestionRepository extends CrudRepository<Question, Long> {
 
-    Optional<Question> findById(final Long id);
+    List<Question> findAll();
 }

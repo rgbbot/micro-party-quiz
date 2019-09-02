@@ -25,7 +25,7 @@ public class QuestionFieldData implements Serializable {
 
         private String textValue;
         private BigDecimal numericValue;
-        private LocalDateTime dateTimeValue;
+        private LocalDateTime datetimeValue;
         private boolean booleanValue;
         private Long playerId;
         private String managerComment;

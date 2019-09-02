@@ -6,7 +6,10 @@ import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "question_field")
@@ -23,7 +26,14 @@ public class QuestionField implements Serializable {
         private String fieldType;
         private Integer displayOrder;
         private String values;
-        private Long masterQuestionFieldId;
+
+        @ManyToOne
+        @JoinColumn(name = "master_question_field_id")
+        private QuestionField masterQuestionField;
+
+        @OneToMany(mappedBy="masterQuestionField")
+        private List<QuestionField> subFields = new ArrayList<>();
+
         private boolean isCorrect;
         private String questionFieldDescription;
 
@@ -31,6 +41,7 @@ public class QuestionField implements Serializable {
         @JoinColumn(name = "question_id", insertable = false, updatable = false)
         @Fetch(FetchMode.JOIN)
         private Question question;
+
 
         @OneToMany(cascade = CascadeType.ALL, mappedBy = "id", fetch = FetchType.LAZY)
         private List<QuestionFieldData> questionFieldData;
